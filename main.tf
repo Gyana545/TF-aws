@@ -39,7 +39,7 @@ resource "aws_security_group" "gyana" {
 }
 
 resource "aws_instance" "myInstance" {
-  ami = "ami-0e0e417dfa2028266"
+  ami = "ami-03753afda9b8ba740"
   instance_type = "t2.micro"
 
   tags = {

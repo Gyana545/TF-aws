@@ -70,7 +70,7 @@ resource "aws_security_group" "nginx-sg" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]  
   }
-  
+
   ingress {
     from_port   = 80
     to_port     = 80
@@ -93,7 +93,7 @@ resource "aws_security_group" "nginx-sg" {
 
 # EC2 instance For Nginx setup
 resource "aws_instance" "nginxserver" {
-  ami                         = "ami-0e0e417dfa2028266"
+  ami                         = "ami-03753afda9b8ba740"
   instance_type               = "t2.micro"
   subnet_id                   = aws_subnet.public-subnet.id
   vpc_security_group_ids      = [aws_security_group.nginx-sg.id]
