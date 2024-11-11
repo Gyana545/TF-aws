@@ -99,6 +99,8 @@ resource "aws_instance" "nginxserver" {
   vpc_security_group_ids      = [aws_security_group.nginx-sg.id]
   associate_public_ip_address = true
 
+  availability_zone           = "ap-south-1a"
+
   user_data = <<-EOF
             #!/bin/bash
             sudo yum install nginx -y
